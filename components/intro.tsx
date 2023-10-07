@@ -2,17 +2,22 @@
 
 import Image from "next/image";
 import React from "react";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 
-import portraitImage from "@/public/portrait.PNG";
+import portraitImage from "@/public/portrait.png";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
     <section
+      ref={ref}
       className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
       id="home"
     >
