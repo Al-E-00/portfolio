@@ -8,6 +8,8 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 
+import portraitImage from "@/public/portrait.PNG";
+
 export default function Intro() {
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
@@ -21,13 +23,11 @@ export default function Intro() {
           }}
         >
           <Image
-            src="/portrait.PNG"
+            src={portraitImage}
             alt="Alessio portrait"
-            width={192}
-            height={192}
             quality={95}
             priority={true}
-            className="h-24 w-24 rounded-full border-[0.15rem] border-white bg-white bg-opacity-50 object-cover object-top shadow-xl backdrop-blur-[0.5rem]"
+            className="h-[14rem] w-[14rem] rounded-full border-[0.15rem] border-white bg-white bg-opacity-30 object-cover object-top shadow-xl backdrop-blur-[0.5rem]"
           />
         </motion.div>
       </div>

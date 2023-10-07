@@ -55,7 +55,7 @@ export const projectsData = [
   {
     title: "Deliveboo",
     description:
-      "It enables restaurateurs to register, publish menus, and accept orders. Clients can browse menus, place orders, and securely pay. Automated emails provide order summaries.",
+      "It enables restaurateurs to register, publish menus, and accept orders. Clients can browse menus, place orders, and securely pay.",
     tags: ["PHP", "Laravel", "Blade", "Vue.js", "Bootstrap", "CSS"],
     imageUrl: delivebooImg,
   },
