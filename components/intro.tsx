@@ -12,7 +12,10 @@ import portraitImage from "@/public/portrait.PNG";
 
 export default function Intro() {
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      id="home"
+    >
       <div className="flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
