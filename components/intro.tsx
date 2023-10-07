@@ -32,7 +32,7 @@ export default function Intro() {
         </motion.div>
       </div>
 
-      <motion.p
+      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export default function Intro() {
         crafting <span className="font-bold">user-centric</span> digital
         solutions. Dive into my portfolio and see how we can elevate{" "}
         <span className="font-bold">your</span> next project.
-      </motion.p>
+      </motion.h1>
 
       <motion.div
         className="flex flex-col justify-center gap-3 px-2 text-lg font-medium sm:flex-row"
