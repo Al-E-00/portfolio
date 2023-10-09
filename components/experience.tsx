@@ -28,7 +28,7 @@ export default function Experience() {
   }, [activeSection]);
 
   return (
-    <section ref={ref} id="experience">
+    <section ref={ref} id="experience" className="mt-28 scroll-mt-28 sm:mb-40">
       <SectionHeading>My Experience</SectionHeading>
 
       <VerticalTimeline lineColor="">
