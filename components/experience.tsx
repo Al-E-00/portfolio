@@ -10,12 +10,13 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
+import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
   const [isExperienceSectionActive, setisExperienceSectionActive] =
     useState(false);
-
   const { ref } = useSectionInView("Experience", 0.5);
+  const { theme } = useTheme();
   const { activeSection } = useActiveSectionContext();
 
   //FIX: the library context/active-section-context should automatically detect
@@ -28,7 +29,7 @@ export default function Experience() {
   }, [activeSection]);
 
   return (
-    <section ref={ref} id="experience" className="mt-28 scroll-mt-28 sm:mb-40">
+    <section ref={ref} id="experience" className="scroll-mt-28 sm:mb-40">
       <SectionHeading>My Experience</SectionHeading>
 
       <VerticalTimeline lineColor="">
@@ -36,26 +37,34 @@ export default function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
-                background: "#f3f4f6",
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba (0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid #9ca3af",
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={experience.date}
               icon={experience.icon}
               iconStyle={{
-                background: "white",
+                background:
+                  theme === "light"
+                    ? "rgba(255, 255, 255, 0.50)"
+                    : "rgba(255, 255, 255, 0.15)",
+                backdropFilter: "blur(.1rem)",
                 fontSize: "1.5rem",
               }}
               visible={isExperienceSectionActive}
             >
               <h3 className="font-semibold capitalize">{experience.title}</h3>
               <p className="!mt-0 font-normal">{experience.location}</p>
-              <p className="!mt-0 !font-normal text-gray-700">
+              <p className="!mt-0 !font-normal text-gray-700 dark:text-white/75">
                 {experience.description}
               </p>
             </VerticalTimelineElement>

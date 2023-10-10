@@ -18,6 +18,7 @@ export default function SubmitBtn() {
         focus:scale-110
         active:scale-105
         disabled:scale-100
+        dark:bg-white dark:bg-opacity-10
         "
       disabled={pending}
     >
