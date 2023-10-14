@@ -2,7 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import delivebooImg from "@/public/deliverboo.png";
-import whatsappWebsiteImg from "@/public/whatsapp.jpeg";
+import whatsappWebsiteImg from "@/public/whatsapp.png";
 import dcWebsiteImg from "@/public/dc_website.jpeg";
 
 export const links = [
