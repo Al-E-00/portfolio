@@ -37,6 +37,7 @@ export async function sendEmail(formData: FormData) {
       }),
     });
 
+    console.log("🚀 ~ sendEmail ~ data:", data);
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
