@@ -1,16 +1,16 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTheme } from "@/context/theme-context";
+import { experiencesData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 import React, { useEffect, useState } from "react";
-import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "@/lib/data";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
+import SectionHeading from "./section-heading";
 
 export default function Experience() {
   const [isExperienceSectionActive, setisExperienceSectionActive] =
